@@ -8,26 +8,27 @@ from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_tavily import TavilySearch
 from resource import prompt
-
+from responseStructure import ResponseStructure
 
 
 def agentWithTravilySearchTool():
 
-    llm=ChatGroq(
-        model="llama-3.3-70b-versatile",
-        temperature=0
-    )
-
-    # llm =ChatOpenAI(
-    #     model="gpt-4o",
+    # llm=ChatGroq(
+    #     model="llama-3.3-70b-versatile",
     #     temperature=0
     # )
+
+    llm =ChatOpenAI(
+        model="gpt-4o",
+        temperature=0
+    )
 
     tool_list=[TavilySearch()]
 
     agent=create_agent(
         model=llm,
-        tools=tool_list
+        tools=tool_list,
+        response_format=ResponseStructure
     )
 
     agent_response = agent.invoke(

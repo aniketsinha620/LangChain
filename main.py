@@ -17,9 +17,9 @@ load_dotenv()
     
 def main():
     
-    # agent_response = agentWithTravilySearchTool()
-    agent_response = agentWithCustomTool()
-    print(f"Agent response: {agent_response}")
+    agent_response = agentWithTravilySearchTool()
+    # agent_response = agentWithCustomTool()
+    print(agent_response["structured_response"].model_dump_json(indent=4))
 
 
 if __name__ == "__main__":

@@ -13,6 +13,7 @@ dependencies = [
     "langchain-openai>=1.4.1",
     "langchain-tavily>=0.2.18",
     "langsmith[claude-agent-sdk]>=0.10.10",
+    "pydantic>=2.13.4",
     "python-dotenv>=1.2.2",
     "tavily-python>=0.7.26",
 ]

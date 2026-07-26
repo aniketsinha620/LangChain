@@ -8,7 +8,7 @@ from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_tavily import TavilySearch
 from resource import prompt
-
+from responseStructure import ResponseStructure
 
 tavily = TavilyClient()
 
@@ -61,7 +61,8 @@ def agentWithCustomTool():
 
     agent=create_agent(
         model=llm,
-        tools=tool_list
+        tools=tool_list,
+        response_format=ResponseStructure
     )
 
     agent_response = agent.invoke(
