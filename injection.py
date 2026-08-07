@@ -10,15 +10,17 @@ load_dotenv()
 
 
 def injection():
-    print("Hello from langchain!")
+
+    print("document loader....")
     loader=UnstructuredLoader(
         file_path="C:\\project\\LLM\\LangChain\\mediumblog1.txt",
         max_characters=100000,
         chunking_strategy="basic",
     )
-
+ 
     data=loader.load()
     # print(f"Loaded {len(data)} documents.{data}")
+    print("document chucking....")
 
     text_splitter=CharacterTextSplitter(
         chunk_size=1000,
@@ -31,13 +33,12 @@ def injection():
     #     print(chunk.page_content)
     #     print("\n")
 
-
+   
     embedding_model=OpenAIEmbeddings(
         openai_api_key=os.getenv("OPENAI_API_KEY"),
     )
 
     print("ingestion....")
-
     vector_store=PineconeVectorStore.from_documents(
         chunks,
         embedding=embedding_model,
