@@ -79,6 +79,7 @@ If you find this project helpful, please consider:
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://aniket-sinha-dev.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aniket-sinha-as/)
+[![Roadmap](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://full-stack-ai-llm-engineering-roadm.vercel.app/)
 
 **Built with ❤️ by Aniket Sinha**
 
